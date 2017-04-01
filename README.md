@@ -119,3 +119,26 @@ ketika kita memanggil function view() maka secara berurutan akan memanggil views
 2. load test (body)
 3. load footer (js/other)
 ```
+
+### Sekarang kita coba buat url yang flexible
+> source-code @config/controller/Welcome.php
+```
+  public function view($default_value = 'test')
+  {
+    $this->load->view('templates/header');
+    $this->load->view('pages/'.$default_value);
+    $this->load->view('templates/footer');
+  }
+```
+
+disini kita melihat perbedaan para function view() yaitu ketambahan parameter ```default_value``` dengan isi ```test```, lalu apa funsinya? __fungsinya__ yaitu ketika kita melakukan pamanggilan url yang tidak mempunyai embel-embel seperti contoh ```localhost/codeigniter/``` maka secara automatis dia akan terisi dengan ```default_value```.
+
+#### lalu bagaimana dengan routes-nya?
+> @config/routes.php
+
+```
+  $route['default_controller'] = 'welcome/view';
+  **$route['(:any)'] = 'welcome/view/$1';**
+  $route['404_override'] = '';
+  $route['translate_uri_dashes'] = FALSE;
+```

@@ -8,10 +8,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	public function view()
+	public function view($default_value = 'test')
 	{
 		$this->load->view('templates/header');
-		$this->load->view('pages/test');
+		$this->load->view('pages/'.$default_value);
 		$this->load->view('templates/footer');
 	}
 }
