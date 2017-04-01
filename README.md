@@ -87,7 +87,7 @@ $route['default_controller'] = 'welcome/view';
 dari source code diatas, kita sudah tau bahwa kita mengload class ```(welcome)``` dengan function ```view()```
 
 ### membuat halaman header(css) footer(js)
->strukture file
+>strukture file @views
 
 ```
 * views
@@ -95,4 +95,15 @@ dari source code diatas, kita sudah tau bahwa kita mengload class ```(welcome)``
   * templates <- new folder
     * header.php <- new file
     * footer.php <- new file
+```
+
+> source-code @config/controller/Welcome.php
+
+```
+  public function view()
+  {
+    $this->load->view('templates/header');
+    $this->load->view('pages/test');
+    $this->load->view('templates/footer');
+  }
 ```
