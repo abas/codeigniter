@@ -39,3 +39,10 @@ setelah selesai, instalasi codeigniter dengan database telah selesai
 ```
 > routes -> controller -> views
 ```
+
+### config/routes.php
+```
+  $route['default_controller'] = 'welcome';
+```
+
+'default_controller' berarti jika kita ngeload halaman yang tak terdefinisi maka akan automatis direct ke 'welcome'.
