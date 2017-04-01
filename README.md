@@ -36,3 +36,6 @@ konfigurasi pada colom berikut :
 setelah selesai, instalasi codeigniter dengan database telah selesai
 
 > # CI - WorkFlow
+```
+> routes -> controller -> views
+```
