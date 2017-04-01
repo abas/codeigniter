@@ -138,7 +138,7 @@ disini kita melihat perbedaan para function view() yaitu ketambahan parameter ``
 
 ```
   $route['default_controller'] = 'welcome/view';
-  **$route['(:any)'] = 'welcome/view/$1';**
+  <b>$route['(:any)'] = 'welcome/view/$1';</b>
   $route['404_override'] = '';
   $route['translate_uri_dashes'] = FALSE;
 ```
