@@ -85,3 +85,14 @@ kemudian, buat folder baru @views dengan nama ```pages``` kemudian didalamnya bu
 $route['default_controller'] = 'welcome/view';
 ```
 dari source code diatas, kita sudah tau bahwa kita mengload class ```(welcome)``` dengan function ```view()```
+
+### membuat halaman header(css) footer(js)
+>strukture file
+
+```
+* views
+  * ....
+  * templates <- new folder
+    * header.php <- new file
+    * footer.php <- new file
+```
