@@ -66,3 +66,14 @@ class Welcome extends CI_Controller {
 }
 ```
 terdapat function index(). yang dimana statmen nya memanggil ```view('welcome_message')```, controller disini berfungsi sebagai jembatan antara ```route``` dengan ```views```.
+
+> ### Sekarang kita coba membuat halaman baru yaitu halaman ```test``` pada folder ```pages```
+> @controller/Welcome.php
+
+```
+  ...
+  public function view()
+  {
+    $this->load->view('pages/test');
+  }
+```
