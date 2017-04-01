@@ -142,3 +142,10 @@ disini kita melihat perbedaan para function view() yaitu ketambahan parameter ``
    $route['404_override'] = '';
    $route['translate_uri_dashes'] = FALSE;
 ```
+
+kita lihat pada line yang ada pointernya, merupakan routes baru dengan tipe baru yaitu ```$route['(:any)'] = 'welcome/view/$1'``` yang artinya memanggil url apapun yang mengarah ke class ```welcome``` function ```view``` dengan parameter ```$1```, maka jika kita memasukkan url misal :
+```
+ localhost/codeigniter/index.php/kontak <- kontak
+```
+
+maka route akan mengatur parameter = kontak dan pada controller membuat direct ki views yang bernama kontak.php
