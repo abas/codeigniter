@@ -13,3 +13,6 @@ yang pertama kita lakukan adalah melakukan instalasi code igniter ke server loca
 ```
 
 > karena nama folder nya ```CodeIgniter``` maka kita melakukan cd ```CodeIgniter```, untuk masuk ke folder tersebut.
+
+> PERLU DICATAT! <br>
+untuk instalasi pada windows, folder framework/project bisa diletakan kedalam folder ```htdocs``` dan untuk Linux, project bisa diletakan kedalam folder __root__ /var/www/html agar bisa dijalankan.
