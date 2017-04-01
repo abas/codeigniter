@@ -23,12 +23,16 @@ untuk instalasi pada windows, folder framework/project bisa diletakan kedalam fo
 * codeigniter
   * application
     * config
-      * database
+      * database.php
 
-pada colom
+konfigurasi pada colom berikut :
 ```
 'hostname' => 'localhost',
 'username' => 'isi_username',
 'password' => 'isi_password',
 'database' => 'nama_database',
 ```
+
+setelah selesai, instalasi codeigniter dengan database telah selesai
+
+> # CI - WorkFlow
