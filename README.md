@@ -1,5 +1,5 @@
 # CodeIgniter
-###sinau dasar CI
+### sinau dasar CI
 
 > instalasi ```CodeIgniter```
 ```
