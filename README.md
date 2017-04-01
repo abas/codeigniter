@@ -107,3 +107,12 @@ dari source code diatas, kita sudah tau bahwa kita mengload class ```(welcome)``
     $this->load->view('templates/footer');
   }
 ```
+
+dari source-code diatas kita memiliki load->view baru yaitu:
+* templates/header
+* ....
+* templates/footer
+ketika kita memanggil function view() maka secara berurutan akan memanggil views seperti pada struktur diatas, yaitu:
+1. load header (css/other)
+2. load test (body)
+3. load footer (js/other)
