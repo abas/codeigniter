@@ -37,7 +37,7 @@ setelah selesai, instalasi codeigniter dengan database telah selesai
 
 > # CI - WorkFlow
 ```
-> **views** -> **controller** -> **routes**
+> views -> controller -> routes
 ```
 
 ### config/routes.php
