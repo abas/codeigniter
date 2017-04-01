@@ -77,3 +77,11 @@ terdapat function index(). yang dimana statmen nya memanggil ```view('welcome_me
     $this->load->view('pages/test');
   }
 ```
+
+kemudian, buat folder baru @views dengan nama ```pages``` kemudian didalamnya buat file dengan nama ```test.php``` jika sudah, langkah selanjutnya yaitu mengatur ```routes.php```
+
+> @config/routes.php
+```
+$route['default_controller'] = 'welcome/view';
+```
+dari source code diatas, kita sudah tau bahwa kita mengload class ```(welcome)``` dengan function ```view()```
