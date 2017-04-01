@@ -113,6 +113,8 @@ dari source-code diatas kita memiliki load->view baru yaitu:
 * ....
 * templates/footer
 ketika kita memanggil function view() maka secara berurutan akan memanggil views seperti pada struktur diatas, yaitu:
+```
 1. load header (css/other)
 2. load test (body)
 3. load footer (js/other)
+```
