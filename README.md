@@ -149,3 +149,24 @@ kita lihat pada line yang ada pointernya, merupakan routes baru dengan tipe baru
 ```
 
 maka route akan mengatur parameter = kontak dan pada controller membuat direct ki views yang bernama kontak.php
+
+#### pengecekan parameter yang tidak ada
+> @config/controller/Welcome.php
+
+```
+public function view($default_value = 'test')
+  {
+    if(!file_exists(APPPATH."views/pages/".$default_value.".php")){
+*      show_404();
+    }
+    $this->load->view('templates/header');
+    $this->load->view('pages/'.$default_value);
+    $this->load->view('templates/footer');
+  }
+```
+**file_exists** berfungsi untuk mengecek apakah file yang kita cari ada? kemudian terdapat tanda seru (!) yaitu menandakan makna **tidak**, brarti pengecekan disini adalah
+```
+  jika (file_tidak_ada)maka
+    tampilkan fungsi 404;
+```
+> yang berarti **404** adalah default halaman error
