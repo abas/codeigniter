@@ -13,7 +13,10 @@ class Welcome extends CI_Controller {
 		if(!file_exists(APPPATH."views/pages/".$default_value.".php")){
 			show_404();
 		}
-		$this->load->view('templates/header');
+
+		$data['item'] = $default_value;
+
+		$this->load->view('templates/header',$data);
 		$this->load->view('pages/'.$default_value);
 		$this->load->view('templates/footer');
 	}

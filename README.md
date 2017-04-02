@@ -170,3 +170,19 @@ public function view($default_value = 'test')
     tampilkan fungsi 404;
 ```
 > yang berarti **404** adalah default halaman error
+
+#### menampilkan data url ke sebuah halaman
+> @config/controller/Welcome.php
+```
+public function view($default_value = 'test')
+  {
+    if(!file_exists(APPPATH."views/pages/".$defau...
+*   $data['item'] = $default_value;
+
+*   $this->load->view('templates/header',$data);
+    $this->load->view('pages/'.$default_value);
+    $this->load->view('templates/footer');
+  }
+```
+
+lihat pada pointer, dimana perubahan itu terjadi. kita membuat sebuah code baru ```$data['item'] = $default_value;``` artinya kita mendeklarasikan variable array[item] = $default_value, dimana ```default_value``` ini adalah url yang kita ketikan nanti. pada code selanjutnya yaitu menambahkan variable ```$data``` ke header, untuk ditampilkan di header.
