@@ -186,3 +186,16 @@ public function view($default_value = 'test')
 ```
 
 lihat pada pointer, dimana perubahan itu terjadi. kita membuat sebuah code baru ```$data['item'] = $default_value;``` artinya kita mendeklarasikan variable array[item] = $default_value, dimana ```default_value``` ini adalah url yang kita ketikan nanti. pada code selanjutnya yaitu menambahkan variable ```$data``` ke header, untuk ditampilkan di header.
+
+> @views/templates/header.php
+```
+  ...
+    <h3>ini header
+      <b style="color:red;">
+*       <?php echo $item; ?>
+      </b>
+      </h3>
+  ...
+```
+
+source-code diatas berfungsi untuk menambahkan data yang telah kita ambil tadi, dengan menuliskan ```echo $item``` **ingat!** yang dicetak adalah ```$item```, bukan variable array data[].
