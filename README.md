@@ -260,5 +260,19 @@ sekarang kita membuat model baru bernama ```News``` untuk pembuatan model silaka
 
 kemudian pada @models/News_model.php
 ```
+<?php
+class News_model extends CI_Model
+{
 
+  public function __construct()
+  {
+    $this->load->database();
+  }
+
+  public function get_news(){
+    $query = $this->db->get('news');
+    return $query->result_array();
+  }
+
+}
 ```  
