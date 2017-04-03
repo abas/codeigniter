@@ -199,3 +199,18 @@ lihat pada pointer, dimana perubahan itu terjadi. kita membuat sebuah code baru 
 ```
 
 source-code diatas berfungsi untuk menambahkan data yang telah kita ambil tadi, dengan menuliskan ```echo $item``` **ingat!** yang dicetak adalah ```$item```, bukan variable array data[].
+
+> ## Bermain Dengan Database
+sekarang silahkan membuat database baru, bisa dibuka ```localhost/phpmyadmin``` kemudian membuat database terserah, database yang dibuat ```codeigniter``` kalau sudah bisa dilakukan connect database pada ```conf/database```
+
+```
+...
+  'hostname' => 'localhost',
+  'username' => 'root',
+  'password' => 'ahmadbasir',
+  'database' => 'codeigniter',
+  'dbdriver' => 'mysqli',
+...
+```
+
+pada ```hostname``` biasanya default ```localhost``` pada ```username``` isikan username ```phpmyadmin``` kalian dan juga pada ```password``` isikan password untuk ```login``` lalu pada ```database``` isikan ```nama database```, untuk ```dbdriver```, untuk ```dbdriver``` kita gunakan ```mysqli``` 
