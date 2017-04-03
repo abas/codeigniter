@@ -213,4 +213,52 @@ sekarang silahkan membuat database baru, bisa dibuka ```localhost/phpmyadmin``` 
 ...
 ```
 
-pada ```hostname``` biasanya default ```localhost``` pada ```username``` isikan username ```phpmyadmin``` kalian dan juga pada ```password``` isikan password untuk ```login``` lalu pada ```database``` isikan ```nama database```, untuk ```dbdriver```, untuk ```dbdriver``` kita gunakan ```mysqli``` 
+pada ```hostname``` biasanya default ```localhost``` pada ```username``` isikan username ```phpmyadmin``` kalian dan juga pada ```password``` isikan password untuk ```login``` lalu pada ```database``` isikan ```nama database```, untuk ```dbdriver```, untuk ```dbdriver``` kita gunakan ```mysqli```
+
+#### membuat query
+> setelah membuat database, kita langsung buat saja querynya, pembuatan query bisa dilakukan secara manual ataupun langsung dengan menggunakan ```SQL``` code.
+
+kita buat table dengan query sebagai berikut:
+```
+news : table
+  id -> integer
+  title -> varchar
+  slug -> varchar
+  text -> text
+```
+atau menggunakan SQL-Code
+```
+CREATE TABLE news{
+  id int(11) NOT NULL AUTO_INCREMENT,
+  title varchar(128) NOT NULL,
+  slug varchar(128) NOT NULL,
+  text text NOT NULL,
+  PRIMARY KEY (id),
+  KEY slug (slug),
+}
+```
+selanjutnya kita akan coba mengisi qeury pada menu insert/tambahkan, isikan data" sebagai berikut:
+```
+  \_ query pertama
+  - title : post pertama
+  - slug : post-pertama
+  - text : ini adalah diskripsi post pertama
+
+  ===========================================
+  \_ query kedua
+  - title : post kedua
+  - slug : post-kedua
+  - text : ini adalah diskripsi post kedua
+```
+> kita tidak perlu mengisikan [id] karena dia akan terisi automatis dan meng'increment' yang artinya akan menambahkan secara automatis jika ada inputan baru.
+
+## Membuat Model baru
+> @models
+
+sekarang kita membuat model baru bernama ```News``` untuk pembuatan model silakan gunakan format **namaModel_Model.php**
+> **\_model** memudahkan kita untuk mengetahui mana model mana controller
+
+kemudian pada @models/News_model.php
+```
+
+```  
