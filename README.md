@@ -275,4 +275,34 @@ class News_model extends CI_Model
   }
 
 }
-```  
+```
+> function \_\_construct berfungsi untuk mengload database
+
+kalau sudah kita buat controllernya,
+@controller/News.php
+```
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class News extends CI_Controller {
+
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->model('news_model');
+    $this->load->helper('url_helper');
+  }
+
+	public function index()
+	{
+    $data['news'] = $this->news_model->get_news();
+    $data['title'] = 'arsip berita';
+
+		$this->load->view('news/index',$data);
+  }
+
+}
+```
+> setiap kita membuat controller jangan lupa nama class nya kita buat sesuai file controllernya.
+
+disini kita buat ```News.php``` sebagai controller dan ```News``` sebagai class. langkah pertama yang harus dilakukan adalah membuat function ```__construct```
