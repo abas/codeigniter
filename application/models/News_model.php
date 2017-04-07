@@ -2,6 +2,7 @@
 class News_model extends CI_Model
 {
 
+
   public function __construct()
   {
     $this->load->database();
@@ -11,5 +12,6 @@ class News_model extends CI_Model
     $query = $this->db->get('news');
     return $query->result_array();
   }
+
 
 }
