@@ -36,24 +36,5 @@ class Abas extends CI_Controller {
     }
   }
 
-	public function update($id)
-	{
-    $this->load->helper('form');
-    $this->load->library('form_validation');
-
-    $this->form_validation->set_rules('nama','Nama','required');
-    $this->form_validation->set_rules('nim','Nim','required');
-    $this->form_validation->set_rules('kelompok','Kelompok','required');
-
-    if ($this->form_validation->run() === FALSE) {
-      $data['MHS'] = $this->abas_model->get_mhs_id($id);
-      $this->load->view('templates/header',$data);
-      $this->load->view('ex/abas',$data);
-      $this->load->view('templates/footer',$data);
-    }else{
-      $this->abas_model->set_mhs();
-      redirect('index.php/abas');
-    }
-  }
 
 }

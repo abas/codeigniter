@@ -1,48 +1,50 @@
 <div class="container">
-
 <div class="row">
   <div class="col l12 s12">
-    <div class="card blue">
-      <div class="card-content">
-        <span class="card-title white-text">Daftar Mahasiswa</span>
+    <a href="<?php base_url();?>">
+      <div class="card blue hoverable" >
+        <div class="card-content">
+          <span class="card-title white-text">Daftar Mahasiswa</span>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
   <?php foreach ($MHS as $mhs) { ?>
   <div class="col l4 m4 s12">
     <div class="card hoverable">
       <div class="card-content">
-        <span class="card-title">
+        <span class="card-title" style="text-transform: uppercase;">
           <?php echo $mhs['nama']; ?>
         </span>
       </div>
       <div class="card-action">
-        <a href="<?php echo base_url();?>index.php/abas/#">
-          <b><?php echo $mhs['nim']; ?></b>
+        <a href="<?php echo base_url();?>abas/#">
+          <b style="text-transform: uppercase;"><?php echo $mhs['nim']; ?></b>
         </a>
-        <a href="<?php echo base_url();?>index.php/abas/#">
+        <a style="text-transform: uppercase;" href="<?php echo base_url();?>abas/#">
           <?php echo $mhs['kelompok']; ?>
         </a>
+        <a href="<?php base_url();?>abas/update/<?php echo $mhs['id'];?>">edit</a>
       </div>
     </div>
   </div>
   <?php } ?>
 </div>
 <div class="row">
-  <div class="col s12 m12 l4">
+  <div class="col s12 m12 l6">
     <?php echo validation_errors(); ?>
-    <?php echo form_open('/index.php/abas'); ?>
+    <?php echo form_open('abas'); ?>
     <div class="card hoverable">
       <div class="card-content">
         <div class="card-title input-field">
-          <input type="text" name="nama" required class="active validate" value="" id="nama">
+          <input style="text-transform: uppercase;" type="text" name="nama" required class="active validate" value="" id="nama">
           <label for="nama">Nama</label>
         </div>
         <div class="card-title input-field">
-          <input type="text" name="nim" id="nim" required value="">
+          <input style="text-transform: uppercase;" type="text" name="nim" id="nim" required value="">
           <label for="nim">Nim</label>
         </div>
-        <div class="card-title input-field">
+        <div style="text-transform: uppercase;" class="card-title input-field">
           <input type="text" name="kelompok" required id="kelompok" value="">
           <label for="kelompok">Kelompok</label>
         </div>
@@ -63,7 +65,7 @@
           <span class="new blue badge">
             <?php echo $jumlah; ?>
           </span>
-          <i class="material-icons">filter_drama</i>Jumlah Mahasiswa
+          <i class="material-icons">person_pin</i>Jumlah Mahasiswa
         </div>
         <div class="collapsible-body white">
           <?php foreach ($MHS as $mhs) { ?>
