@@ -32,7 +32,7 @@ class Abas extends CI_Controller {
       $this->load->view('templates/footer',$data);
     }else{
       $this->abas_model->set_mhs();
-      redirect('index.php/abas');
+      redirect('abas');
     }
   }
 
